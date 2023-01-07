@@ -17,6 +17,7 @@ class Spaceship extends Ball {
     this.fRate = 30;
     this.movePoints = 0;
     this.timePoints = 0;
+    this.memory = 0.0;
   };
   update() {
     // Fire Timer

@@ -18,16 +18,14 @@ class SpaceHammerGame {
     this.gameTime = 0;
     this.maxGameTime = 60 * 60; // 60fps * N seconds
     this.score = 0;
-    this.bestScore = 0;
-    this.bestGeneration = 0;
     this.gameSpeed = 50;
     this.maxRays = 16;
     this.rayDist = SCREEN.height * 0.5;
     this.vision = [];
     this.showVision = false;
-    this.inputCount = this.maxRays + 4;
+    this.inputCount = this.maxRays + 5;
     this.inputFrames = 3;
-    this.species = new Species(100, [this.inputCount * this.inputFrames, 8, 8, 12, 4], 0.01, 0.1);
+    this.species = new Species(100, [this.inputCount * this.inputFrames, 8, 8, 12, 5], 0.01, 0.1);
     this.brain = 0;
     this.visionButton = new ImageButton(
       SCREEN.height + 150
@@ -157,6 +155,7 @@ class SpaceHammerGame {
     inputs.push(this.ship.vel.y / this.ship.maxSpeed);    // Ship Y Speed
     inputs.push(this.ship.a / (Math.PI * 2));             // Ship Angle
     inputs.push(this.ship.fTime / this.ship.fRate);       // Ship Fire Timer
+    inputs.push(this.ship.memory);                        // Ship memory value
     // Frame Stacking
     this.vision.splice(0, this.inputCount);
     this.vision = this.vision.concat(inputs);
@@ -185,6 +184,8 @@ class SpaceHammerGame {
         this.ship.fTime = this.ship.fRate;
       }
     }
+    // Read in new memory value
+    this.ship.memory = controls[4];
   };
   /*
   */
