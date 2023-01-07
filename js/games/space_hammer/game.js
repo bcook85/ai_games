@@ -25,7 +25,7 @@ class SpaceHammerGame {
     this.showVision = false;
     this.inputCount = this.maxRays + 5;
     this.inputFrames = 3;
-    this.species = new Species(100, [this.inputCount * this.inputFrames, 8, 8, 12, 5], 0.01, 0.1);
+    this.species = new Species(100, [this.inputCount * this.inputFrames, 8, 8, 12, 5], 0.02, 0.1);
     this.brain = 0;
     this.visionButton = new ImageButton(
       SCREEN.height + 150
