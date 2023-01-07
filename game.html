@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AI Games</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="Stylesheet" type="text/css" href="css/game.css">
+        <link rel="shortcut icon" type="image/png" href="images/game_icon.png"/>
+    </head>
+    <body>
+        <!-- Game Screen -->
+        <canvas id="screen"></canvas>
+
+        <!-- I/O -->
+        <script type="text/javascript" src="js/display/screen.js"></script>
+        <script type="text/javascript" src="js/input/keymanager.js"></script>
+        <script type="text/javascript" src="js/input/mousemanager.js"></script>
+
+        <!-- Assets -->
+        <script type="text/javascript" src="js/assets/spritesheet.js"></script>
+        <script type="text/javascript" src="js/assets/assetlist.js"></script>
+
+        <!-- Utilities -->
+        <script type="text/javascript" src="js/util/astar.js"></script>
+        <script type="text/javascript" src="js/util/vector.js"></script>
+        <script type="text/javascript" src="js/util/ball.js"></script>
+        <script type="text/javascript" src="js/util/neuralnetwork.js"></script>
+
+        <!-- UI -->
+        <script type="text/javascript" src="js/ui/button.js"></script>
+        <script type="text/javascript" src="js/ui/carousel.js"></script>
+        <script type="text/javascript" src="js/ui/slider.js"></script>
+
+        <!-- States -->
+        <script type="text/javascript" src="js/states/state.js"></script>
+        <script type="text/javascript" src="js/states/loadstate.js"></script>
+        <script type="text/javascript" src="js/states/startstate.js"></script>
+
+        <!--
+            Games
+        -->
+        <!-- Bird Brains -->
+        <script type="text/javascript" src="js/games/bird_brains/bird.js"></script>
+        <script type="text/javascript" src="js/games/bird_brains/pipe.js"></script>
+        <script type="text/javascript" src="js/games/bird_brains/game.js"></script>
+        <!-- Space Hammer -->
+        <script type="text/javascript" src="js/games/space_hammer/game.js"></script>
+        <script type="text/javascript" src="js/games/space_hammer/spaceship.js"></script>
+        <script type="text/javascript" src="js/games/space_hammer/bullet.js"></script>
+        <script type="text/javascript" src="js/games/space_hammer/rock.js"></script>
+
+
+        <!-- Game Loop -->
+        <script type="text/javascript" src="js/gameloop.js"></script>
+    </body>
+</html>
